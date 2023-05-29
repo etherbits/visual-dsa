@@ -10,8 +10,8 @@ export default function Home() {
       <h4 className="text-xl ml-6 font-medium">Data Structures</h4>
       <ul className="ml-12 mb-6">
         <li>
-          <Link href="/binary-tree" className="text-blue-500">
-            Binary Tree
+          <Link href="/binary-search-tree" className="text-blue-500">
+            Binary Search Tree
           </Link>
         </li>
       </ul>
