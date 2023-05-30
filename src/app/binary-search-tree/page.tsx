@@ -2,17 +2,6 @@
 import { BinarySearchTree, Node } from "@/data_structures/binary_search_tree";
 import { useRef, useEffect, useState } from "react";
 
-const logBinaryTree = <T,>(node: Node<T> | null) => {
-  if (!node) {
-    return;
-  }
-
-  console.log(node);
-
-  logBinaryTree(node.left);
-  logBinaryTree(node.right);
-};
-
 const generateVisualNodes = <T,>(
   node: Node<T> | null,
   visualNodes: (T | string)[][],
@@ -51,7 +40,6 @@ export default function BinarySearchTreePage() {
     generateVisualNodes(binaryTree.rootNode, visualNodes);
     setVisualNodes(visualNodes.map((nodeArrays) => [...nodeArrays]));
     console.log(visualNodes);
-    // logBinaryTree(binaryTree.rootNode)
   }, [canvasRef]);
 
   return (
