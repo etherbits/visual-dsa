@@ -29,7 +29,21 @@ export class BinarySearchTree<T> {
   }
 
   // O(n)
-  search(value: T) { }
+  search(value: T) {
+    return this.searchNode(this.rootNode, value)
+  }
+
+  searchNode(node: Node<T> | null, value: T): boolean {
+    if (node === null) {
+      return false
+    }
+
+    if (node.value === value) {
+      return true
+    }
+
+    return this.searchNode(node.value > value ? node.left : node.right, value)
+  }
 
   attachNode(node: Node<T>, value: T) {
     if (value < node.value) {

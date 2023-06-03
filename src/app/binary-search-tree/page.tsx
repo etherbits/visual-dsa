@@ -34,8 +34,11 @@ export default function BinarySearchTreePage() {
     binaryTree.append(3);
     binaryTree.append(2);
     binaryTree.append(3);
-    binaryTree.append(3);
     binaryTree.append(-1);
+    binaryTree.append(-1);
+    binaryTree.append(0);
+    binaryTree.append(1);
+    console.log(binaryTree.search(0))
     generateVisualNodes(binaryTree.rootNode, visualNodes);
     setVisualNodes(visualNodes.map((nodeArrays) => [...nodeArrays]));
     console.log(visualNodes);
